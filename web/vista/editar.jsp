@@ -18,7 +18,7 @@
             Libro item = (Libro) request.getAttribute("item");
         %>
         <h1>Editar Libro</h1>
-    <from action="Principal?op=guardar" method="post">
+    <form action="Principal?op=guardar" method="post">
         ID: <input type="text" name="id" value="<%= item.getId() %>" size="2" pattern="[1-9]{1}[0-9]*"/>
             <input type="hidden" name="tipo" value="<%= item.getId() %>" required/>
             <br>
@@ -30,6 +30,6 @@
             <input type="radio" name="estado" value="2" <%= (item.getEstado() == 2) ? "checked":""%> required/>Prestado
             <br>
             <input type="submit" value="Enviar"/>
-    </from>
+    </form>
     </body>
 </html>
